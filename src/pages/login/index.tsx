@@ -12,25 +12,24 @@ class Login extends Component<any> {
 
 	handleSubmit = (e: any) => {
 		e.preventDefault();
-		this.props.form.validateFields((err: any, values: any) => {
+		// 必须保证async所在函数直接包裹await
+		this.props.form.validateFields(async (err: any, values: any) => {
 			if (!err) {
-				if (values.username === 'chenxueyan16' && values.password === '111') {
+				const data = await api.test();
+				if (data.code === 0) {
 					message.success('登录成功！');
 					sessionStorage.setItem('isLogin', '1');
 					setTimeout(() => {
-						router.push('/dash');
+						router.push('/home');
 					}, 1000)
 				}
 			}
 		});
 	};
-	async _test(){
+	// 或者
+	_test = async () => {
 		const data = await api.test();
 		console.log(data)
-	}
-
-	componentDidMount() {
-		this._test();
 	}
 
 	render() {
