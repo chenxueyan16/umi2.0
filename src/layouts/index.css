@@ -1,0 +1,23 @@
+.projectLogo{
+    float: left;
+    margin:18px 10px 0 0;
+}
+.projectTitle{
+    color:#fff;
+    font-size: 20px;
+    font-weight:500;
+    line-height: 55px;
+}
+.projectSider{
+    box-shadow: rgba(0, 21, 41, 0.35) 2px 0px 6px;
+    background: rgb(78, 81, 93); 
+    flex: 0 0 200px; 
+    width: 200px;
+    padding:20px 0;
+}
+.loginOut{
+    color:#fff;
+    font-size: 14px;
+    line-height: 55px;
+    float:right;
+} 

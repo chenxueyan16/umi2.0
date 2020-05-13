@@ -1,0 +1,15 @@
+.loginPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    background-color: #f6f6f6;
+}
+.loginBlock{
+    width:400px;
+    padding:30px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 12px 0px;
+}
