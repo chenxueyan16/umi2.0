@@ -80,6 +80,7 @@ class Main extends Component {
 		return (
 			<Fragment>
 				{
+					// 已登录条件下阻拦通过地址栏返回登录页面的操作
 					pathname === '/login' ? (
 						<Redirect to={'/home'} />
 					) : (
