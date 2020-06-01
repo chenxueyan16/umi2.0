@@ -26,7 +26,7 @@ class Main extends Component {
 				path: '/search'
 			}, {
 				id: '1-2',
-				name: 'Tabel',
+				name: 'Table',
 				path: '/table'
 			}]
 		}, {

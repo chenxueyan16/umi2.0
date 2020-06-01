@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Form, Input, Button, Icon, message } from 'antd';
 import styles from './index.css';
 import router from 'umi/router';
-import * as api from '@/api';
 
 class Login extends Component<any> {
 	constructor(props: any) {
@@ -15,14 +14,14 @@ class Login extends Component<any> {
 		// 必须保证async所在函数直接包裹await
 		this.props.form.validateFields(async (err: any, values: any) => {
 			if (!err) {
-				const data = await api.test();
-				if (data.code === 0) {
+				// const data = await api.test();
+				// if (data.data.code === 0) {
 					message.success('登录成功！');
 					sessionStorage.setItem('isLogin', '1');
 					setTimeout(() => {
 						router.push('/home');
 					}, 1000)
-				}
+				// }
 			}
 		});
 	};
