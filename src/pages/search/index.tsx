@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, message } from 'antd';
 import MySearch from '@/components/MySearch';
 
-class Search extends React.Component {
+class Search extends React.Component<any> {
 	state = {
 		loading: false,
 		info: {
